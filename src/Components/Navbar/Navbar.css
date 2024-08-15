@@ -1,40 +1,78 @@
 .main {
   display: flex;
   width: 100vw;
-  height: 60px;
+  height: 150px;
   background-color: transparent;
   /* border: 1px solid rgba(128, 128, 128, 0.456); */
   box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.2);
 }
 
 .nav-left {
-  width: 30vw;
+  width: 25vw;
   height: 100%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  font-size: larger;
+  flex-direction: column;
+ 
 }
 
 .pages {
-  color: rgb(0, 255, 183);
-  font-size: larger;
+  color: black;
+  font-size: large;
+  font-weight: bold;
 }
 
 .logo {
-  color:rgb(2, 252, 2);
+  font-size: 60px;
+  color:#09bab5;
   margin-left: 10px;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+.logobottom {
+  display: flex;
+  align-items: center;
+}
+
+.HR {
+  color: grey;
+  font-weight: bold;
+  font-size: 40px;
 }
 
 .website {
-  color:rgb(2, 252, 2);
+  font-size: 35px;
+  font-weight: bold;
+  color: black;
   margin-left: 10px;
+  margin-top: 5px;
+}
+
+.webright {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  margin-top: 5px;
 }
 
 .nav-right {
-  width: 70vw;
+  width: 75vw;
   height: 100%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  margin-top: 40px;
+}
+
+.GP {
+  width: 125px;
+padding: 10px;
+color: white;
+background-color: #09bab5;
+border: none;
+border-radius: 5px;
+font-size: 15px;
 }
