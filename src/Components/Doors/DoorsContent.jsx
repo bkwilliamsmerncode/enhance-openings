@@ -1,13 +1,13 @@
 import React from 'react'
-import './Page3Content.css'
+import './DoorsContent.css'
 
-const Page3Content = () => {
+const DoorsContent = () => {
   return (
  <>
    <div className="xlscreens">
         <div className="xlsinner">
           <div className="page3Main">
-            <h1>PAGE 3</h1>
+            <h1>Doors</h1>
           </div>
         </div>
       </div>
@@ -15,4 +15,4 @@ const Page3Content = () => {
   )
 }
 
-export default Page3Content
+export default DoorsContent

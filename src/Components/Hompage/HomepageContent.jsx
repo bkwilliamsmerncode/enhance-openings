@@ -1,14 +1,14 @@
 import React from "react";
-import "./Page1Content.css";
+import "./HomepageContent.css";
 
 
-const Page1Content = () => {
+const HomepageContent = () => {
   return (
     <>
       <div className="xlscreens">
         <div className="xlsinner">
           <div className="page1Main">
-
+<h1>HOMEPAGE</h1>
           </div>
         </div>
       </div>
@@ -16,4 +16,4 @@ const Page1Content = () => {
   );
 };
 
-export default Page1Content;
+export default HomepageContent;

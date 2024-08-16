@@ -12,7 +12,7 @@ const nav = useNavigate();
         <div className="nav-left">
           <div className="logo">ENHANCE</div>
           <div className="logobottom">
-          <div className="website">OPENINGS</div>
+          <div className="website">openings</div>
           <div className="HR">  |  </div>
           <div className="webright">
             <div> WINDOWS, </div>
@@ -22,25 +22,25 @@ const nav = useNavigate();
         </div>
         <div className="nav-right">
 
-            <div onClick={() => nav('/')}><p className="pages">Windows</p></div>
+            <div onClick={() => nav('/Windows')}><p className="pages">Windows</p></div>
           
           
-            <div onClick={() => nav('/Page2')}><p className="pages">Doors</p></div>
+            <div onClick={() => nav('/Doors')}><p className="pages">Doors</p></div>
           
           
-            <div onClick={() => nav('/Page3')} ><p className="pages">Security</p></div>
+            <div onClick={() => nav('/Security')} ><p className="pages">Security</p></div>
           
           
-            <div onClick={() => nav('/Page4')} ><p className="pages">Skylights</p></div>
+            <div onClick={() => nav('/Skylights')} ><p className="pages">Skylights</p></div>
           
           
-            <div onClick={() => nav('/Page5')} ><p className="pages">Testimonials</p></div>
+            <div onClick={() => nav('/Testimonials')} ><p className="pages">Testimonials</p></div>
 
-            <div onClick={() => nav('/Page5')} ><p className="pages">Gallery</p></div>
+            <div onClick={() => nav('/Gallery')} ><p className="pages">Gallery</p></div>
 
-            <div onClick={() => nav('/Page5')} ><p className="pages">Service</p></div>
+            <div onClick={() => nav('/Service')} ><p className="pages">Service</p></div>
 
-            <div onClick={() => nav('/Page5')} ><p className="pages">Contact Us</p></div>
+            <div onClick={() => nav('/Contact Us')} ><p className="pages">Contact Us</p></div>
 
             <button className="GP">GET PRICING</button>
           
