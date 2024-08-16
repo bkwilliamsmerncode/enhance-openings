@@ -1,13 +1,13 @@
 import React from 'react'
-import './Page4Content.css'
+import './SecurityContent.css'
 
-const Page4Content = () => {
+const SecurityContent = () => {
   return (
  <>
    <div className="xlscreens">
         <div className="xlsinner">
           <div className="page4Main">
-            <h1>PAGE 4</h1>
+            <h1>Security</h1>
           </div>
         </div>
       </div>
@@ -15,4 +15,4 @@ const Page4Content = () => {
   )
 }
 
-export default Page4Content
+export default SecurityContent

@@ -1,21 +1,31 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import Page1 from "./Pages/Page1";
-import Page2 from "./Pages/Page2";
-import Page3 from "./Pages/Page3";
-import Page4 from "./Pages/Page4";
-import Page5 from "./Pages/Page5";
+import Homepage from "./Pages/Homepage";
+import Windows from "./Pages/Windows";
+import Doors from "./Pages/Doors";
+import Security from "./Pages/Security";
+import Skylights from "./Pages/Skylights";
+import Testimonials from "./Pages/Testimonials";
+import Gallery from "./Pages/Gallery";
+import Service from "./Pages/Service";
+import ContactUs from "./Pages/ContactUs";
+import GetPricing from "./Pages/GetPricing";
 
 function App() {
   return (
     <>
       <div>
         <Routes>
-          <Route path="/" element={<Page1 />} />
-          <Route path="/Page2" element={<Page2 />} />
-          <Route path="/Page3" element={<Page3 />} />
-          <Route path="/Page4" element={<Page4 />} />
-          <Route path="/Page5" element={<Page5 />} />
+          <Route path="/" element={<Homepage />} />
+          <Route path="/Windows" element={<Windows />} />
+          <Route path="/Doors" element={<Doors />} />
+          <Route path="/Security" element={<Security />} />
+          <Route path="/Skylights" element={<Skylights />} />
+          <Route path="/Testimonials" element={<Testimonials />} />
+          <Route path="/Gallery" element={<Gallery />} />
+          <Route path="/Service" element={<Service />} />
+          <Route path="/ContactUs" element={<ContactUs />} />
+          <Route path="/GetPricing" element={<GetPricing />} />
         </Routes>
       </div>
     </>

@@ -1,13 +1,13 @@
 import React from 'react'
-import './Page2Content.css'
+import './WindowsContent.css'
 
-const Page2Content = () => {
+const WindowsContent = () => {
   return (
  <>
    <div className="xlscreens">
         <div className="xlsinner">
           <div className="page2Main">
-            <h1>PAGE 2</h1>
+            <h1>Windows</h1>
           </div>
         </div>
       </div>  
@@ -15,4 +15,4 @@ const Page2Content = () => {
   )
 }
 
-export default Page2Content
+export default WindowsContent

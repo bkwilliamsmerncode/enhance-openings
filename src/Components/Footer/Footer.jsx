@@ -13,7 +13,7 @@ const Footer = () => {
             <div className="logo">ENHANCE</div>
             <div className="logobottom">
               <div className="website" style={{ color: "white" }}>
-                OPENINGS
+                openings
               </div>
               <div className="HR"> | </div>
               <div className="webright">

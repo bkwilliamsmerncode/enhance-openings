@@ -1,13 +1,13 @@
 import React from 'react'
-import './Page5Content.css'
+import './SkylightsContent.css'
 
-const Page5Content = () => {
+const SkylightsContent = () => {
   return (
  <>
    <div className="xlscreens">
         <div className="xlsinner">
           <div className="page1Main">
-            <h1>PAGE 5</h1>
+            <h1>Skylights</h1>
           </div>
         </div>
       </div>
@@ -15,4 +15,4 @@ const Page5Content = () => {
   )
 }
 
-export default Page5Content
+export default SkylightsContent
