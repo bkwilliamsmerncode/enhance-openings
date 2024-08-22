@@ -9,7 +9,7 @@ const nav = useNavigate();
   return (
     <>
       <div className="main">
-        <div className="nav-left">
+        <div onClick={() => nav('/')} className="nav-left">
           <div className="logo">ENHANCE</div>
           <div className="logobottom">
           <div className="website">openings</div>
@@ -40,9 +40,9 @@ const nav = useNavigate();
 
             <div onClick={() => nav('/Service')} ><p className="pages">Service</p></div>
 
-            <div onClick={() => nav('/Contact Us')} ><p className="pages">Contact Us</p></div>
+            <div onClick={() => nav('/ContactUs')} ><p className="pages">Contact Us</p></div>
 
-            <button className="GP">GET PRICING</button>
+            <button onClick={() => nav('/GetPricing')} className="GP">GET PRICING</button>
           
         </div>
       </div>

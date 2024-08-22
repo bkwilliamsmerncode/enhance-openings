@@ -1,11 +1,19 @@
-import React from 'react'
+import React from 'react';
+import Navbar from '../Components/Navbar/Navbar';
+import ContactUsContent from '../Components/Contact Us/ContactUsContent.jsx';
+import Footer from "../Components/Footer/Footer.jsx"
 
 const ContactUs = () => {
   return (
-    <div>
-      
-    </div>
+    <>
+<Navbar />
+<ContactUsContent /> 
+<Footer /> 
+</>
   )
 }
 
 export default ContactUs
+
+
+
