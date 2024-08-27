@@ -9,8 +9,13 @@ const nav = useNavigate();
   return (
     <>
       <div className="main">
+      <div className="logo">
+        <div className="logoleft"><p>ENHANCE</p></div>
+        <div className="logoright"><p>Serving Central and Southern Arizona 520-886-1602</p></div>
+      </div>
+      <div className="navbottom">
         <div onClick={() => nav('/')} className="nav-left">
-          <div className="logo">ENHANCE</div>
+          
           <div className="logobottom">
           <div className="website">openings</div>
           <div className="HR">  |  </div>
@@ -42,8 +47,11 @@ const nav = useNavigate();
 
             <div onClick={() => nav('/ContactUs')} ><p className="pages">Contact Us</p></div>
 
-            <button onClick={() => nav('/GetPricing')} className="GP">GET PRICING</button>
           
+
+            <button onClick={() => nav('/GetPricing')} className="GP">GET PRICING</button>
+      
+        </div>
         </div>
       </div>
     </>
