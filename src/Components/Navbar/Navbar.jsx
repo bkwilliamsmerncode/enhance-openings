@@ -8,7 +8,26 @@ const nav = useNavigate();
 
   return (
     <>
-      <div className="main">
+    <div id="navbarMain">
+      <div className="navMainInner">
+        <div className="navLeft">
+          <div className="logoTop"><p>ENHANCE</p></div>
+          <div className="logoBottom">
+            <div className="logoBottomLeft"><p>openings</p></div>
+            <div className="logoBottomMiddle"><p> | </p></div>
+            <div className="logoBottomRight">
+              <div className="logoBottomRightTop"><p>WINDOWS,</p></div>
+              <div className="logoBottomRightBottom"><p>DOORS & MORE</p></div>
+            </div>
+          </div>
+        </div>
+        <div className="navRight">
+          <div className="navRightUpper"></div>
+          <div className="navRightLower"></div>
+        </div>
+      </div>
+    </div>
+      {/* <div className="main">
       <div className="logo">
         <div className="logoleft"><p>ENHANCE</p></div>
         <div className="logoright"><p>Serving Central and Southern Arizona 520-886-1602</p></div>
@@ -53,7 +72,7 @@ const nav = useNavigate();
       
         </div>
         </div>
-      </div>
+      </div> */}
     </>
   );
 };

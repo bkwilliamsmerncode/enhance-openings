@@ -1,10 +1,95 @@
-.main {
+#navbarMain {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navMainInner {
+  display: flex;
+  border: solid black 1px;
+  max-width: 1300px;
+  width: 100%;
+  height: 150px;
+}
+
+.navLeft {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: solid 1px;
+  width: 25%;
+  height: 100%;
+}
+
+.navRight {
+  display: flex;
+  flex-direction: column;
+  border: solid 1px;
+  width: 75%;
+  height: 100%;
+}
+
+.navRightUpper {
+  border: 1px solid;
+  height: 50%;
+  width: 100%;
+}
+
+.navRightLower {
+  border: 1px solid;
+  height: 50%;
+  width: 100%;
+}
+
+.logoTop {
+  color: #09bab5;
+  font-size: 60px;
+  font-weight: 500;
+}
+
+.logoBottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logoBottomLeft {
+  font-size: 42px;
+  font-weight: 500;
+}
+
+.logoBottomMiddle {
+  font-size: 30px;
+  font-weight: 200;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.logoBottomRight {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+}
+
+.logoBottomRightTop {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.logoBottomRightBottom {
+  font-size: 12px;
+  font-weight: 600;
+}
+/* .main {
   display: flex;
   flex-direction: column;
   width: 100%;
   height: auto;
   background-color: transparent;
-  /* border: 1px solid rgba(128, 128, 128, 0.456); */
   box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.2);
 }
 
@@ -14,7 +99,6 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  /* border: solid 1px red; */
   
  
 }
@@ -24,7 +108,6 @@
   font-size: large;
   font-weight: bold;
   cursor: pointer;
-  /* border: solid 1px red; */
 }
 
 .logo {
@@ -34,7 +117,6 @@
   margin-left: 10px;
   font-weight: 500;
   margin-top: 10px;
-  /* border: solid 1px red; */
   width: 100%;
 }
 
@@ -54,8 +136,6 @@ margin-right: 50px;
 .logobottom {
   width: 100%;
   display: flex;
-  /* align-items: center; */
-  /* border: solid 1px red; */
 }
 
 .HR {
@@ -69,7 +149,6 @@ margin-right: 50px;
   font-weight: bold;
   color: black;
   margin-left: 10px;
-  /* margin-top: 5px; */
 }
 
 .webright {
@@ -111,4 +190,4 @@ font-size: 15px;
   flex-direction: column;
   height: 100%;
 }
-
+ */
