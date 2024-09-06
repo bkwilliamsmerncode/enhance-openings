@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./Navbar.css";
+import { FaPhone } from "react-icons/fa";
 
 const Navbar = () => {
 
@@ -22,8 +23,36 @@ const nav = useNavigate();
           </div>
         </div>
         <div className="navRight">
-          <div className="navRightUpper"></div>
-          <div className="navRightLower"></div>
+          <div className="navRightUpper">
+            <div className="text1"><p>Serving All Of Southern Arizona</p></div>
+            <div className="text2"><FaPhone /></div>
+            <div className="text3">520-886-1602</div>
+            </div>
+          <div className="navRightLower">
+          <div onClick={() => nav('/Windows')}><p className="pages">Windows</p></div>
+          
+          
+          <div onClick={() => nav('/Doors')}><p className="pages">Doors</p></div>
+        
+        
+          <div onClick={() => nav('/Security')} ><p className="pages">Security</p></div>
+        
+        
+          <div onClick={() => nav('/Skylights')} ><p className="pages">Skylights</p></div>
+        
+        
+          <div onClick={() => nav('/Testimonials')} ><p className="pages">Testimonials</p></div>
+
+          <div onClick={() => nav('/Gallery')} ><p className="pages">Gallery</p></div>
+
+          <div onClick={() => nav('/Service')} ><p className="pages">Service</p></div>
+
+          <div onClick={() => nav('/ContactUs')} ><p className="pages">Contact Us</p></div>
+
+        
+
+          <button onClick={() => nav('/GetPricing')} className="GP">GET PRICING</button>
+          </div>
         </div>
       </div>
     </div>
