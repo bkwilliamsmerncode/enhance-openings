@@ -1,107 +1,105 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
-import "./Navbar.css";
-import { FaPhone } from "react-icons/fa";
+import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+
+import './Navbar.css';
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [activePage, setActivePage] = useState(null);
+  const [scrolled, setScrolled] = useState(false);
+  const navigate = useNavigate();
 
-const nav = useNavigate();
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const handlePageClick = (page, route) => {
+    setActivePage(page);
+    setIsOpen(false); // Close the modal
+    navigate(route); // Navigate to the route
+  };
+
+  // Handle scroll effect for sticky navbar
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
     <>
-    <div id="navbarMain">
-      <div className="navMainInner">
-        <div className="navLeft">
-          <div className="logoTop"><p>ENHANCE</p></div>
-          <div className="logoBottom">
-            <div className="logoBottomLeft"><p>openings</p></div>
-            <div className="logoBottomMiddle"><p> | </p></div>
-            <div className="logoBottomRight">
-              <div className="logoBottomRightTop"><p>WINDOWS,</p></div>
-              <div className="logoBottomRightBottom"><p>DOORS & MORE</p></div>
-            </div>
+      <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
+        <div className="logo">
+          <h1>MyCompany</h1>
+        </div>
+        <ul className="nav-links">
+          {[
+            { page: 'Homepage', route: '/' },
+            { page: 'Contact Us', route: '/ContactUs' },
+            { page: 'Doors', route: '/Doors' },
+            { page: 'Gallery', route: '/Gallery' },
+            { page: 'Get Pricing', route: '/GetPricing' },
+            { page: 'Security', route: '/Security' },
+            { page: 'Service', route: '/Service' },
+            { page: 'Skylights', route: '/Skylights' },
+            { page: 'Testimonials', route: '/Testimonials' },
+            { page: 'Windows', route: '/Windows' }
+          ].map((item, index) => (
+            <li
+              key={index}
+              className={`nav-item ${activePage === item.page ? 'active' : ''}`}
+              onClick={() => handlePageClick(item.page, item.route)}
+            >
+              {item.page}
+            </li>
+          ))}
+        </ul>
+        <button className="cta-button">Sign Up</button>
+        <div  onClick={toggleMenu}>
+          <span className="bar"></span>
+          <span className="bar"></span>
+          <span className="bar"></span>
+        </div>
+      </nav>
+
+      {isOpen && (
+        <div className="nav-modal">
+          <div className="modal-content">
+            <button className="close-modal" onClick={toggleMenu}>✖</button>
+            <ul className="modal-links">
+              {[
+                 { page: 'Homepage', route: '/' },
+                 { page: 'Contact Us', route: '/ContactUs' },
+                 { page: 'Doors', route: '/Doors' },
+                 { page: 'Gallery', route: '/Gallery' },
+                 { page: 'Get Pricing', route: '/GetPricing' },
+                 { page: 'Security', route: '/Security' },
+                 { page: 'Service', route: '/Service' },
+                 { page: 'Skylights', route: '/Skylights' },
+                 { page: 'Testimonials', route: '/Testimonials' },
+                 { page: 'Windows', route: '/Windows' }
+              ].map((item, index) => (
+                <li
+                  key={index}
+                  className={`modal-item ${activePage === item.page ? 'active' : ''}`}
+                  onClick={() => handlePageClick(item.page, item.route)}
+                >
+                  {item.page}
+                </li>
+              ))}
+            </ul>
+            <button className="cta-button modal-button">Sign Up</button>
           </div>
         </div>
-        <div className="navRight">
-          <div className="navRightUpper">
-            <div className="text1"><p>Serving All Of Southern Arizona</p></div>
-            <div className="text2"><FaPhone /></div>
-            <div className="text3">520-886-1602</div>
-            </div>
-          <div className="navRightLower">
-          <div onClick={() => nav('/Windows')}><p className="pages">Windows</p></div>
-          
-          
-          <div onClick={() => nav('/Doors')}><p className="pages">Doors</p></div>
-        
-        
-          <div onClick={() => nav('/Security')} ><p className="pages">Security</p></div>
-        
-        
-          <div onClick={() => nav('/Skylights')} ><p className="pages">Skylights</p></div>
-        
-        
-          <div onClick={() => nav('/Testimonials')} ><p className="pages">Testimonials</p></div>
-
-          <div onClick={() => nav('/Gallery')} ><p className="pages">Gallery</p></div>
-
-          <div onClick={() => nav('/Service')} ><p className="pages">Service</p></div>
-
-          <div onClick={() => nav('/ContactUs')} ><p className="pages">Contact Us</p></div>
-
-        
-
-          <button onClick={() => nav('/GetPricing')} className="GP">GET PRICING</button>
-          </div>
-        </div>
-      </div>
-    </div>
-      {/* <div className="main">
-      <div className="logo">
-        <div className="logoleft"><p>ENHANCE</p></div>
-        <div className="logoright"><p>Serving Central and Southern Arizona 520-886-1602</p></div>
-      </div>
-      <div className="navbottom">
-        <div onClick={() => nav('/')} className="nav-left">
-          
-          <div className="logobottom">
-          <div className="website">openings</div>
-          <div className="HR">  |  </div>
-          <div className="webright">
-            <div> WINDOWS, </div>
-            <div> DOORS & MORE</div>
-          </div>
-          </div>
-        </div>
-        <div className="nav-right">
-
-            <div onClick={() => nav('/Windows')}><p className="pages">Windows</p></div>
-          
-          
-            <div onClick={() => nav('/Doors')}><p className="pages">Doors</p></div>
-          
-          
-            <div onClick={() => nav('/Security')} ><p className="pages">Security</p></div>
-          
-          
-            <div onClick={() => nav('/Skylights')} ><p className="pages">Skylights</p></div>
-          
-          
-            <div onClick={() => nav('/Testimonials')} ><p className="pages">Testimonials</p></div>
-
-            <div onClick={() => nav('/Gallery')} ><p className="pages">Gallery</p></div>
-
-            <div onClick={() => nav('/Service')} ><p className="pages">Service</p></div>
-
-            <div onClick={() => nav('/ContactUs')} ><p className="pages">Contact Us</p></div>
-
-          
-
-            <button onClick={() => nav('/GetPricing')} className="GP">GET PRICING</button>
-      
-        </div>
-        </div>
-      </div> */}
+      )}
     </>
   );
 };
