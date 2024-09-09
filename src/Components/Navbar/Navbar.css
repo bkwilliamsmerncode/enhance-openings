@@ -1,132 +1,156 @@
-#navbarMain {
-  width: 100%;
-  height: 150px;
+.navbar {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-}
-
-.navMainInner {
-  display: flex;
-  /* border: solid black 1px; */
-  max-width: 1400px;
-  width: 100%;
-  height: 150px;
-}
-
-.navLeft {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  /* border: solid 1px; */
-  width: 25%;
-  height: 100%;
-}
-
-.navRight {
-  display: flex;
-  flex-direction: column;
-  /* border: solid 1px; */
-  width: 75%;
-  height: 100%;
-}
-
-.navRightUpper {
-  color: grey;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  /* border: 1px solid; */
-  height: 50%;
-  width: 100%;
-}
-
-.navRightLower {
-  display: flex;
-  justify-content: space-around;
-  align-items: end;
-  /* border: 1px solid; */
-  height: 50%;
-  width: 100%;
-}
-
-.text1 {
-margin-right: 10px;
-}
-
-.text2 {
-  margin-right: 5px;
-}
-
-.text3 {
-  margin-right: 10px;
-}
-
-.logoTop {
-  color: #09bab5;
-  font-size: 60px;
-  font-weight: 500;
-  /* border: 1px solid red; */
-}
-
-
-
-.logoBottom {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* border: 1px solid red; */
-}
-
-.logoBottomLeft {
-  font-size: 42px;
-  font-weight: 500;
-}
-
-.logoBottomMiddle {
-  font-size: 30px;
-  font-weight: 200;
-  margin-right: 5px;
-  margin-left: 5px;
-}
-
-.logoBottomRight {
-  display: flex;
-  justify-content: start;
-  align-items: start;
-  flex-direction: column;
-}
-
-.logoBottomRightTop {
-  font-size: 12px;
-  font-weight: 600;
-}
-
-.logoBottomRightBottom {
-  font-size: 12px;
-  font-weight: 600;
-  line-height: 10px;
-}
-
-.pages {
+  padding: 1rem 2rem;
+  background-color: white;
   color: black;
-  font-size: large;
-  font-weight: bold;
+  position: fixed; /* Make the navbar sticky */
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  transition: background-color 0.3s ease;
+}
+
+.navbar.scrolled {
+  background-color: rgba(255, 255, 255, 0.95); /* Slight transparency */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow when scrolled */
+}
+
+.logo h1 {
+  font-size: 1.5rem;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-item {
+  margin: 0 1rem;
   cursor: pointer;
-  margin-bottom: 10px;
+  position: relative;
+  color: black;
+  transition: color 0.3s ease;
 }
 
-.GP {
-  width: 125px;
-padding: 10px;
-color: white;
-background-color: #09bab5;
-border: none;
-border-radius: 5px;
-font-size: 15px;
-margin-bottom: 10px;
+.nav-item:hover,
+.nav-item.active {
+  color: #09bab5;
+  text-decoration: underline;
 }
 
+.cta-button {
+  background-color: #09bab5;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
 
+.cta-button:hover {
+  background-color: #007f7a;
+}
 
+/* Hamburger Menu Styles */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  margin: 4px 0;
+}
+
+/* Modal Styles */
+.nav-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  color: white;
+  transform: translateX(-100%);
+  animation: slideIn 0.3s forwards;
+  z-index: 100;
+  height: auto; /* Set height to auto */
+}
+
+@keyframes slideIn {
+  to {
+    transform: translateX(0);
+  }
+}
+
+.modal-content {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.modal-links {
+  list-style: none;
+  text-align: center;
+}
+
+.modal-item {
+  margin: 1rem 0;
+  cursor: pointer;
+}
+
+.modal-item:hover,
+.modal-item.active {
+  color: #09bab5;
+  text-decoration: underline;
+}
+
+.modal-button {
+  margin-top: 2rem;
+  display: block;
+  width: 100%;
+  text-align: center;
+  background-color: #09bab5;
+  color: white;
+  padding: 0.5rem;
+  border: none;
+  cursor: pointer;
+}
+
+.modal-button:hover {
+  background-color: #007f7a;
+}
+
+/* Close Button */
+.close-modal {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .hamburger {
+    display: initial;
+  }
+
+  .nav-modal {
+    width: 100%;
+  }
+}
