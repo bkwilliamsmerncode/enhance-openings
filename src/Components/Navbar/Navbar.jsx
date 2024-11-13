@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import logo3 from "../../Assets/logo3.png"
+import logo4 from "../../Assets/logo4.png"
+import { GiHamburgerMenu } from "react-icons/gi";
 
 import './Navbar.css';
 
@@ -38,7 +41,8 @@ const Navbar = () => {
     <>
       <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
         <div className="logo">
-          <h1>MyCompany</h1>
+          <img className='imglogo' src={logo3} alt='logo'/> 
+          <img className='imglogo1' src={logo4} alt='logo'/> 
         </div>
         <ul className="nav-links">
           {[
@@ -62,12 +66,11 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
-        <button className="cta-button">Sign Up</button>
         <div  onClick={toggleMenu}>
-          <span className="bar"></span>
-          <span className="bar"></span>
-          <span className="bar"></span>
+        <GiHamburgerMenu className='icon' />
         </div>
+        <button className="cta-button">Sign Up</button>
+        
       </nav>
 
       {isOpen && (
